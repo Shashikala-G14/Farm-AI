@@ -1,0 +1,409 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/kart.css') }}">
+<title>FarmAI</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="navTop">
+          <div class="navItem">
+              <h1 class="logo">AgroKart</h1>
+          </div>
+          <div class="navItem">
+           
+              <div class="search">
+                <input type="text" placeholder="Search..." class="searchInput">
+                <img src="{{ url_for('static',filename='search.jpeg') }}"  class="searchIcon" alt=".." width="30" height="30">
+              </div> 
+        </div>
+       
+      </div>
+      <div class="navBottom">
+           <a href="/agroCart" class="category"><h3 class="menuItem seeds">Seeds</h3><a>
+          <a href="/fertilizers"class="category"><h3 class="menuItem">Fertilizers</h3><a>
+          <a href="/pesticides" class="category"><h3 class="menuItem">Pesticides</h3><a>
+          <a href="/farmTools" class="category"><h3 class="menuItem">Farm Machinary & Tools</h3><a>
+          <a href="/soilKit" class="category"><h3 class="menuItem">Soil and water Testing Kit</h3><a>
+
+      </div>
+    </nav>
+<div class="slider">
+    <div class="sliderWrapper">
+      <div class="seedSlider">
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='brocco.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Broccoli Seeds</h1>
+            <h3 class="sliderSeed">Vegetable Seeds<h3>
+            <h2 class="sliderPrice">₹72</h2>
+            <button class="buyButton" id="buyButton"><a href="https://www.allthatgrows.in/products/broccoli">BUY NOW!</a></button>
+
+            </div>
+           
+          </div>    
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='brinjaal.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Brinjal Seeds</h1>
+            <h3 class="sliderSeed">Vegetable Seeds<h3>
+            <h2 class="sliderPrice">₹70</h2>
+           <button class="buyButton" id="buyButton"><a href="https://www.allthatgrows.in/products/brinjal-black-beauty">BUY NOW!</a></button>
+            </div>
+           
+          </div>
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='tomatobg.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Tomato Seeds</h1>
+            <h3 class="sliderSeed">Vegetable Seeds<h3>
+            <h2 class="sliderPrice">₹72</h2>
+            <button class="buyButton" id="buyButton"><a href="https://www.allthatgrows.in/products/tomato-oval">BUY NOW!</a></button>
+            </div>
+           
+          </div>
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='cucumberbg.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+              <h1 class="sliderTitle">Cucumber Seeds</h1>
+            <h3 class="sliderSeed">Vegetable Seeds<h3>
+            <h2 class="sliderPrice">₹72</h2>
+            <button class="buyButton" id="buyButton"><a href="https://seed2plant.in/products/salad-cucumber-seeds">BUY NOW!</a></button>
+            </div>
+            
+          </div>
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='spinachbg.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+              <h1 class="sliderTitle">Spinach Seeds</h1>
+            <h3 class="sliderSeed">Vegetable Seeds<h3>
+            <h2 class="sliderPrice">₹72</h2>
+            <button class="buyButton" id="buyButton"><a href="https://share.google/ozB8ELxNwoiTKKaYy">BUY NOW!</a></button>
+            </div>
+            
+          </div>
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='cornbg.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Corn Seeds</h1>
+            <h3 class="sliderSeed">Vegetable Seeds<h3>
+            <h2 class="sliderPrice">₹72</h2>
+            <button class="buyButton" id="buyButton"><a href="https://www.allthatgrows.in/products/corn-seeds">BUY NOW!</a></button>
+            </div>
+           
+          </div>
+        
+      </div>
+      <div class="fertilizerSlider seedSlider">
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='cowDung.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Cow Manure Dung </h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹219</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Ugaoo-Cow-Manure-1-Kg/dp/B07D7PTJPN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2AL6IVND0I91F">BUY NOW!</a></button>
+            </div>
+           
+        </div>   
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='mustardCake.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Mustard Cake Powder</h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹229</h2>
+           <button class="buyButton"  id="buyButton">
+                <a href="https://www.zeptonow.com/pn/ugaoo-mustard-cake-powder-for-healthy-plants-and-soil-1-kg-gardening-accessories/pvid/9512ba2c-c061-4ce2-a067-9001fa0a9bdb?srsltid=AfmBOopha2VRUKVinpRZ4mka0f6t4QQ5F8enTKWZtYlbZR32vKneztFY3ss">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='calciumNitrate.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Calcium Nitrate</h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹919</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://krushidukan.bharatagri.com/en/products/calcium-nitrate-fertilizer-mahadhan">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='pruthviNpk.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Prudhvi NPK Fertilizers</h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹319</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.knbiosciences.in/product-page/best-organic-npk-fertilizer-price">BUY NOW!</a></button>
+            </div>
+           
+        </div>
+        
+      </div>  
+      <div class="pesticides seedSlider">
+         <div class="sliderItem">
+            <img src="{{ url_for('static',filename='zincSulfate.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Zinc Sulphate </h1>
+            <h3 class="sliderSeed">Micro-Nutrient Fertilizers<h3>
+            <h2 class="sliderPrice">₹442</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://agribegri.com/products/buy-gujarat-agri-panchsheel-multi-micronutrient-fertilizer-online-1.php?srsltid=AfmBOopmxlWFtTgv1_G7ac61WHi-TwR8fMfKN3ogJKwXJnTP3ja4juYxIKY">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='rogor.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Rogor Insecticide</h1>
+            <h3 class="sliderSeed">FMC<h3>
+            <h2 class="sliderPrice">₹91</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.bighaat.com/products/rogor-insecticide">BUY NOW!</a></button>
+            </div>
+           
+        </div>  
+         <div class="sliderItem">
+            <img src="{{ url_for('static',filename='sovata.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Insect Remover</h1>
+            <h3 class="sliderSeed">Pesticides<h3>
+            <h2 class="sliderPrice">₹252</h2>
+           <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Essential-Powerful-Insecticide-Removing-500/dp/B0D7T9CGY4/ref=asc_df_B0D7T9CGY4?mcid=7d4164d0944539bd9c88e86ecb21a762&tag=googleshopmob-21&linkCode=df0&hvadid=709963255109&hvpos=&hvnetw=g&hvrand=10484009994128704782&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9303268&hvtargid=pla-2369200640588&psc=1&gad_source=4">BUY NOW!</a></button>
+            </div>
+           
+        </div>  
+         <div class="sliderItem">
+            <img src="{{ url_for('static',filename='ferterra.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">FMC Ferterra</h1>
+            <h3 class="sliderSeed">Pesticides<h3>
+            <h2 class="sliderPrice">₹1769</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://krushidukan.bharatagri.com/en/products/ferterra-insecticide-fmc">BUY NOW!</a></button>
+            </div>
+           
+        </div>  
+         <div class="sliderItem">
+            <img src="{{ url_for('static',filename='marshal.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Marshal Insecticide</h1>
+            <h3 class="sliderSeed">Insecticide<h3>
+            <h2 class="sliderPrice">₹1,105</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.rythukart.com/product/32064826/Marshal-Insecticide">BUY NOW!</a></button>
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='orga.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Orga Neem</h1>
+            <h3 class="sliderSeed">Insecticide<h3>
+            <h2 class="sliderPrice">₹1391.00</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://kaybeebio.com/product/organeem-10000-ppm/">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+      </div> 
+      <div class="farmTools seedSlider">
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='cultivator.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Tractor Cultivator</h1>
+            <h3 class="sliderSeed">Farm and Machinery Tools<h3>
+            <h2 class="sliderPrice">₹20,000</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://share.google/MYRBMhi7PRbVXHnom">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='tractor.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Mahindra Tractor</h1>
+            <h3 class="sliderSeed">Farm and Machinery Tools<h3>
+            <h2 class="sliderPrice">₹4,00,000</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.tradeindia.com/products/mahindra-tractor-9245117.html">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='harvestor.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Harvester</h1>
+            <h3 class="sliderSeed">Farm and Machinery Tools<h3>
+            <h2 class="sliderPrice">₹33,60,000</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href=" https://share.google/WlW1uhKjUgZBnjUeK">BUY NOW!</a></button>
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='sprayer.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Sprayer</h1>
+            <h3 class="sliderSeed">Farm and Machinery Tools<h3>
+            <h2 class="sliderPrice">₹12,141</h2>
+           <button class="buyButton" id="buyButton"><a href="https://www.moglix.com/neptune-1hp-35cc-power-pressure-sprayer-with-4-stroke-engine-npw-768-wh/mp/msn4k6zp8148kq">BUY NOW!</a></button>
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='seedingMachine.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Seeding Machine</h1>
+            <h3 class="sliderSeed">Farm and Machinery Tools<h3>
+            <h2 class="sliderPrice">₹7,500</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Advance-Kishan-Planting-Operated-Agriculture/dp/B08PL66W5Y/ref=asc_df_B08PL66W5Y?mcid=5906b07ac1f73d7097f1c8fd7949aac5&tag=googleshopmob-21&linkCode=df0&hvadid=709963254953&hvpos=&hvnetw=g&hvrand=11780155491020304139&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9303268&hvtargid=pla-1236245312298&psc=1&gad_source=4">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+
+      </div>
+      <div class="soilKit seedSlider">
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='soilphMeter.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Soil pH Meter</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹499</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Naitik-Creation-Moisture-Hydroponic-Intensity/dp/B07FNQDLSY?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=ATRDH6Y3F0D4N">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='soiltestkit.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Soil Test Kit</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹3,091</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Luster-Leaf-1601-Rapitest-Soil/dp/B0000DI845?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2PRL1RFFZO5CK">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='npkSoilKit.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">NPK Soil Chemical Test Kit</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹3,350</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://wordpress-1165640-4327814.cloudwaysapps.com/product/npk-soil-chemical-test-kit-10-tests-each-hi3895/">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='soilMoistureMeterKit.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Soil Moisture Meter Kit</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹3,499</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Rapid-Soil-Moisture-Meter-Kit/dp/B0D11KW42Y?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AIRS0040EIQ9G">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+
+
+      </div>
+       
+
+
+
+
+
+
+
+    </div>
+</div>
+<div class="features">
+  <div class="feature">
+    <img src="{{url_for('static',filename='shipping.png')}}" alt="" class="featureImg">
+    <span class="featureTitle">FREE SHIPPING</span>
+    <span class="featuredDesc">Free worldwide shipping on all orders.</span>
+  </div>
+  <div class="feature">
+    <img src="{{url_for('static',filename='return.png')}}" alt="" class="featureImg">
+    <span class="featureTitle">30 DAYS RETURN</span>
+    <span class="featuredDesc">No question return and easy refund in 14 days</span>
+  </div>
+  <div class="feature">
+    <img src="{{url_for('static',filename='giftCard.png')}}" alt="" class="featureImg">
+    <span class="featureTitle">GIFT CARDS</span>
+    <span class="featuredDesc">Buy gift cards and use coupon codes easily </span>
+  </div>
+  <div class="feature">
+    <img src="{{url_for('static',filename='contact.png')}}" alt="" class="featureImg">
+    <span class="featureTitle">CONTACT US</span>
+    <span class="featuredDesc">Keep in touch via email and support systems.</span>
+  </div>
+</div>
+<div class="payment">
+  <div class="details">
+    <h1 class="payTitle">Personal Information</h1>
+    <label class="info">Name and Surname</label>
+    <input type="text" placeholder="John Doe" class="payInput">
+    <label class="info">Phone Number</label>
+    <input type="number" placeholder="Enter Your Phone Number" class="payInput">
+    <label class="info">Address</label>
+    <input type="text" placeholder="Enter Your Address" class="payInput">
+  </div> 
+  <h1 class="payTitle">Card Information</h1>
+  <div class="cardIcons">
+    <img src="{{url_for('static',filename='visabg.png')}} " width="50" alt=" " class="cardIcon">
+    <img src="{{url_for('static',filename='masterCard.png')}} " width="50" alt=" " class="cardIcon">
+
+  </div>
+  <input type="password" class="payInput" placeholder="cardNumber">  
+  <div class="cardInfo">
+    <input type="text" placeholder="mm" class="payInput sm">
+    <input type="text" placeholder="yyyy" class="payInput sm ">
+    <input type="text" placeholder="cvv" class="payInput sm ">
+
+  </div>
+  <button class="payButton">Checkout! </button>
+  <span class="close">X</span>
+</div> 
+<h3 class="slogan gallery">Gallery </h3>
+<div class="gallery">
+  <div class="galleryItem">
+    
+    <img src="{{url_for('static',filename='farmer1.jpeg')}}" alt=" " class="galleryImg">
+  </div>  
+   <div class="galleryItem">
+   
+    <img src="{{url_for('static',filename='farmer2.jpeg')}}" alt=" " class="galleryImg">
+  </div>  
+   <div class="galleryItem">
+   
+    <img src="{{url_for('static',filename='farmer3.jpeg')}}" alt=" " class="galleryImg">
+  </div>  
+
+
+</div> 
+  <h1 class="galleryTitle">🌾 "Rooted in Tradition, Growing with Technology – Empowering Every Farmer with FarmAI." 🌿</h1> 
+<script src="{{ url_for('static',filename='js/script.js')}}">
+</script>
+  </body>

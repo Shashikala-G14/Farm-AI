@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat.css') }}">
+      <title>FarmAI</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="user-chat-box">
+     
+    </div>
+      <div class="ai-chat-box">
+      <img src="{{url_for('static',filename='mira.png')}} " width="10%" alt=" " id="aiImg">
+      <div class="ai-chat-area">
+       👋 Hello! I’m Mira, your smart farming assistant.
+      🌱 I can help you with plant disease detection, give advice on sustainable farming, and suggest the right products for your crops.
+
+      📷 Upload a leaf image to detect any plant issues, or ask me anything about your farm!
+
+      Let’s grow healthy crops together! 🌾💚
+      </div>
+      
+    </div>
+    </div>
+    <div class="prompt-area">
+      <input type="text" id="prompt" placeholder="Message...">
+      <button id="image"><img src="{{url_for('static',filename='img.png')}} " width="40" alt="">
+      <input type="file" accept="images/*" hidden>
+      </button>
+       <button id="image"><img src="{{url_for('static',filename='submit.png')}} "  width="27" alt=""> </button>
+    </div>
+    <script>
+    const imageUrl = "{{ image_url }}"; 
+    const aiUrl = "{{ ai_Url }}";  
+    const loadUrl = "{{ load_Url }}";  
+    
+    </script>
+    <script src="{{url_for('static',filename='js/chatJs.js')}}"> </script>
+  </body>
+ </html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+</head>
+<style>
+    body{
+        background-color:white;
+
+    }
+    .container{
+        background-color:green;
+        padding:20px;
+        color:white;
+       
+
+    }
+    .btn{
+        background-color: ;
+        padding:10px;
+        text-align:center;
+    }
+    .head{
+        background-color:white;
+        padding:10px;
+        width:40%;
+    }
+     .btn2{
+        background-color: #b92b27;
+        padding:10px;
+        color:white;
+    }
+</style>
+<body >
+    <div class="container">
+        <h1>Plant Disease Detection</h1>
+    </div>
+    <h1 class="head">Upload a plant leaf image to detect disease</h1>
+    <form action="/predictD" method="post" enctype="multipart/form-data">
+      <button class="btn">  <input type="file" name="file"></button>
+        <button class="btn2">  <input type="submit" value="Predict"></button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/kart.css') }}">
+<title>FarmAI</title>
+  </head>
+  <body>
+    <nav>
+      <div class="navTop">
+   <div class="navItem">
+              <h1 class="logo">AgroKart</h1>
+        </div>
+        <div class="navItem">
+              <div class="search">
+                <input type="text" placeholder="Search..." class="searchInput">
+                <img src="{{ url_for('static',filename='search.jpeg') }}"  class="searchIcon" alt=".." width="30" height="30">
+              </div>
+        </div>
+        
+      </div>
+      <div class="navBottom">
+          <a href="/agroCart" class="category"><h3 class="menuItem seeds">Seeds</h3><a>
+          <a href="/fertilizers"class="category"><h3 class="menuItem">Fertilizers</h3><a>
+          <a href="/pesticides" class="category"><h3 class="menuItem">Pesticides</h3><a>
+          <a href="/farmTools" class="category"><h3 class="menuItem">Farm Machinary & Tools</h3><a>
+          <a href="/soilKit" class="category"><h3 class="menuItem">Soil and water Testing Kit</h3><a>
+
+      </div>
+    </nav>
+<div class="slider">
+    <div class="sliderWrapper">
+      <div class="fertilizerSlider seedSlider">
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='cowDung.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Cow Manure Dung </h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹219</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Ugaoo-Cow-Manure-1-Kg/dp/B07D7PTJPN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2AL6IVND0I91F">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>   
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='mustardCake.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Mustard Cake Powder</h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹229</h2>
+           <button class="buyButton"  id="buyButton">
+                <a href="https://www.zeptonow.com/pn/ugaoo-mustard-cake-powder-for-healthy-plants-and-soil-1-kg-gardening-accessories/pvid/9512ba2c-c061-4ce2-a067-9001fa0a9bdb?srsltid=AfmBOopha2VRUKVinpRZ4mka0f6t4QQ5F8enTKWZtYlbZR32vKneztFY3ss">BUY NOW!</a></button>
+
+
+            </div>
+           
+        </div>
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='calciumNitrate.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Calcium Nitrate</h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹919</h2>
+           <button class="buyButton"  id="buyButton">
+                <a href="https://krushidukan.bharatagri.com/en/products/calcium-nitrate-fertilizer-mahadhan">BUY NOW!</a></button>
+
+
+            </div>
+           
+        </div>
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='pruthviNpk.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Prudhvi NPK Fertilizers</h1>
+            <h3 class="sliderSeed">Fertilizers<h3>
+            <h2 class="sliderPrice">₹319</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.knbiosciences.in/product-page/best-organic-npk-fertilizer-price">BUY NOW!</a></button>
+            </div>
+           
+        </div>
+        <div class="pesticides seedSlider">
+         <div class="sliderItem">
+            <img src="{{ url_for('static',filename='zincSulfate.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Zinc Sulphate </h1>
+            <h3 class="sliderSeed">Micro-Nutrient Fertilizers<h3>
+            <h2 class="sliderPrice">₹442</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://agribegri.com/products/buy-gujarat-agri-panchsheel-multi-micronutrient-fertilizer-online-1.php?srsltid=AfmBOopmxlWFtTgv1_G7ac61WHi-TwR8fMfKN3ogJKwXJnTP3ja4juYxIKY">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        
+      </div>  
+    </div>
+</div>
+<div class="payment">
+  <div class="details">
+    <h1 class="payTitle">Personal Information</h1>
+    <label class="info">Name and Surname</label>
+    <input type="text" placeholder="John Doe" class="payInput">
+    <label class="info">Phone Number</label>
+    <input type="number" placeholder="Enter Your Phone Number" class="payInput">
+    <label class="info">Address</label>
+    <input type="text" placeholder="Enter Your Address" class="payInput">
+  </div> 
+  <h1 class="payTitle">Card Information</h1>
+  <div class="cardIcons">
+    <img src="{{url_for('static',filename='visabg.png')}} " width="50" alt=" " class="cardIcon">
+    <img src="{{url_for('static',filename='masterCard.png')}} " width="50" alt=" " class="cardIcon">
+
+  </div>
+  <input type="password" class="payInput" placeholder="cardNumber">  
+  <div class="cardInfo">
+    <input type="text" placeholder="mm" class="payInput sm">
+    <input type="text" placeholder="yyyy" class="payInput sm ">
+    <input type="text" placeholder="cvv" class="payInput sm ">
+
+  </div>
+  <button class="payButton">Checkout! </button>
+  <span class="close">X</span>
+</div> 
+
+<script src="{{ url_for('static',filename='js/script.js')}}">
+  </body>
+  </html>

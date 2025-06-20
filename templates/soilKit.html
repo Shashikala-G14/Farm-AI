@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/kart.css') }}">
+<title>FarmAI</title>
+  </head>
+  <body>
+    <nav>
+      <div class="navTop">
+   <div class="navItem">
+             <h1 class="logo">AgroKart</h1>
+        </div>
+        <div class="navItem">
+              <div class="search">
+                <input type="text" placeholder="Search..." class="searchInput">
+                <img src="{{ url_for('static',filename='search.jpeg') }}"  class="searchIcon" alt=".." width="30" height="30">
+              </div>
+        </div>
+        
+      </div>
+      <div class="navBottom">
+          <a href="/agroCart" class="category"><h3 class="menuItem seeds">Seeds</h3><a>
+          <a href="/fertilizers"class="category"><h3 class="menuItem">Fertilizers</h3><a>
+          <a href="/pesticides" class="category"><h3 class="menuItem">Pesticides</h3><a>
+          <a href="/farmTools" class="category"><h3 class="menuItem">Farm Machinary & Tools</h3><a>
+          <a href="/soilKit" class="category"><h3 class="menuItem">Soil and water Testing Kit</h3><a>
+
+      </div>
+    </nav>
+<div class="slider">
+    <div class="sliderWrapper">
+        <div class="soilKit seedSlider">
+          <div class="sliderItem">
+            <img src="{{ url_for('static',filename='soilphMeter.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Soil pH Meter</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹499</h2>
+             <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Naitik-Creation-Moisture-Hydroponic-Intensity/dp/B07FNQDLSY?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=ATRDH6Y3F0D4N">BUY NOW!</a></button>
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='soiltestkit.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Soil Test Kit</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹3,091</h2>
+             <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Luster-Leaf-1601-Rapitest-Soil/dp/B0000DI845?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2PRL1RFFZO5CK">BUY NOW!</a></button>
+
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='npkSoilKit.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">NPK Soil Chemical Test Kit</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹3,350</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://wordpress-1165640-4327814.cloudwaysapps.com/product/npk-soil-chemical-test-kit-10-tests-each-hi3895/">BUY NOW!</a></button>
+
+
+            </div>
+           
+        </div>  
+        <div class="sliderItem">
+            <img src="{{ url_for('static',filename='soilMoistureMeterKit.png')}}" alt=".." class="sliderImg">
+            <div class="slidebg">
+               <h1 class="sliderTitle">Soil Moisture Meter Kit</h1>
+            <h3 class="sliderSeed">Soil Kit<h3>
+            <h2 class="sliderPrice">₹3,499</h2>
+            <button class="buyButton"  id="buyButton">
+                <a href="https://www.amazon.in/Rapid-Soil-Moisture-Meter-Kit/dp/B0D11KW42Y?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AIRS0040EIQ9G">BUY NOW!</a></button>
+
+
+            </div>
+           
+        </div>  
+
+
+      </div>
+       
+
+
+
+
+
+
+
+    </div>
+</div>
+<div class="payment">
+  <div class="details">
+    <h1 class="payTitle">Personal Information</h1>
+    <label class="info">Name and Surname</label>
+    <input type="text" placeholder="John Doe" class="payInput">
+    <label class="info">Phone Number</label>
+    <input type="number" placeholder="Enter Your Phone Number" class="payInput">
+    <label class="info">Address</label>
+    <input type="text" placeholder="Enter Your Address" class="payInput">
+  </div> 
+  <h1 class="payTitle">Card Information</h1>
+  <div class="cardIcons">
+    <img src="{{url_for('static',filename='visabg.png')}} " width="50" alt=" " class="cardIcon">
+    <img src="{{url_for('static',filename='masterCard.png')}} " width="50" alt=" " class="cardIcon">
+
+  </div>
+  <input type="password" class="payInput" placeholder="cardNumber">  
+  <div class="cardInfo">
+    <input type="text" placeholder="mm" class="payInput sm">
+    <input type="text" placeholder="yyyy" class="payInput sm ">
+    <input type="text" placeholder="cvv" class="payInput sm ">
+
+  </div>
+  <button class="payButton">Checkout! </button>
+  <span class="close">X</span>
+</div> 
+
+<script src="{{ url_for('static',filename='js/script.js')}}">
+  </body>
+  </html>
