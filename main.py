@@ -207,12 +207,12 @@ def diseasePrediction():
 def chatbot():
     
     return render_template('/chatbot.html', image_url=url_for('static', filename='kisan.png'),ai_Url=url_for('static', filename='mira.png'),load_Url=url_for('static', filename='loading.webp'))
-API_KEY="AIzaSyCj63nxMx2WQIa53v7WK1JVBj3OA4VYeeA"
+API_KEY="YOUR_API_KEY"
 from flask import Flask, request, jsonify, render_template
 import requests
 
 # app = Flask(__name__)
-# API_KEY = "AIzaSyDdXc2d2g6Pk3RrYE9yFH1lHZUdd4M5yUI"
+
 # Flask backend: /generate
 @app.route('/generate', methods=['POST'])
 def generate():
@@ -221,7 +221,7 @@ def generate():
         data = request.get_json()
         prompt = data.get('prompt', '')
         image = data.get('image')
-        API_KEY = "AIzaSyDdXc2d2g6Pk3RrYE9yFH1lHZUdd4M5yUI"
+        API_KEY = "YOUR_API_KEY"
 
         headers = {"Content-Type": "application/json"}
         url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={API_KEY}"
